@@ -33,8 +33,11 @@ if __name__ == '__main__':
     # Find Countour
     (cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 
+    cnts = sorted(cnts, key=cv2.contourArea, reverse=True,)[:5]  # 외곽의 면적이 큰 순서대로 정렬
 
-    
+    for c in cnts:
+        pass
+
 
 
 
